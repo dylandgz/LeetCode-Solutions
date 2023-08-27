@@ -2,7 +2,6 @@
 
 ![image](https://github.com/dylandgz/LeetCode-Solutions/assets/70587488/26ae5f53-931b-461d-b1b1-e76efcbbdd3a)
 
-
 Welcome to my LeetCode repository! This repository serves as a platform for tracking my progress in technical interview preparation and sharing my solutions, knowledge, and notes on various coding problems. By making my code public, I am holding myself accountable for consistent progress while also contributing to the community's collective knowledge.
 
 ## Purpose
