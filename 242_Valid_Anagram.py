@@ -1,16 +1,29 @@
-
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        # create dictionary that will store arrays of anagrams
-        # create lists that will represent keys of anagrams
-        # important to use defaultdict because it helps deal with key error
-        # note the use of ord()
-        answer =defaultdict(list)
+    def isAnagram(self, s: str, t: str) -> bool:
+        # if they are not the same size then they are not anagrams
+        # need hash table to store letters for both words
+        # compare the tables and if true then yes it is an anagram
 
-        for word in strs:
-            coun t =[0 ] *26
-            for s in word:
-                count[ord ('a' ) -ord(s) ]+ =1
+        hash_s = {}
+        hash_t = {}
 
-            answer[tuple(count)].append(word)
-        return answer.values()
+        if len(s) != len(t):
+            return False
+
+        for i in s:
+            if i not in hash_s:
+                hash_s[i] = 1
+            else:
+                hash_s[i] += 1
+
+        for k in t:
+            if k not in hash_t:
+                hash_t[k] = 1
+            else:
+                hash_t[k] += 1
+
+        for y in hash_s:
+            if hash_s[y] != hash_t.get(y, 0):
+                return False
+
+        return True
